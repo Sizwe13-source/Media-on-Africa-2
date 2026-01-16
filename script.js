@@ -110,25 +110,22 @@ function openChat() {
 }
 
 /* === COOKIE CONSENT === */
-if (!localStorage.getItem("cookiesAccepted")) {
+document.addEventListener("DOMContentLoaded", () => {
   const cookieDiv = document.getElementById("cookie-consent");
-  if (cookieDiv) cookieDiv.style.display = "flex";
-}
 
-function acceptCookies() {
-  localStorage.setItem("cookiesAccepted", "true");
-  document.getElementById("cookie-consent").style.display = "none";
-}
+  // Show cookie if not accepted
+  if (!localStorage.getItem("cookiesAccepted") && cookieDiv) {
+    cookieDiv.style.display = "flex"; // or "block" depending on your CSS
+  }
 
-/* === SMOOTH SCROLL FOR ANCHOR LINKS === */
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) target.scrollIntoView({ behavior: "smooth" });
-  });
+  // Accept button function
+  window.acceptCookies = function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    if (cookieDiv) {
+      cookieDiv.style.display = "none";
+    }
+  };
 });
-
 
 /* === STEPS ANIMATION (HOW WE WORK) === */
 document.addEventListener("DOMContentLoaded", () => {

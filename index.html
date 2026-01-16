@@ -639,41 +639,17 @@
 
 
     <!-- Cookie Consent -->
-    <div
-      id="cookie-consent"
-      style="
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #1a1a2e;
-        padding: 20px;
-        text-align: center;
-        z-index: 10000;
-        border-top: 1px solid #7A1E2C;
-        display: none;
-      "
-    >
-      <p>
-        We use essential cookies to ensure our site works. By continuing, you
-        agree to our
-        <a href="privacy.html" style="color: #7A1E2C">Privacy Policy</a>.
-      </p>
-      <button
-        onclick="acceptCookies()"
-        style="
-          background: #7A1E2C;
-          color: #0a0a16;
-          border: none;
-          padding: 10px 20px;
-          border-radius: 5px;
-          cursor: pointer;
-          margin: 5px;
-        "
-      >
-        Accept
-      </button>
+    <div id="cookie-consent" class="cookie-consent">
+      <div class="cookie-card">
+        <p>
+          We use essential cookies to ensure our site works. By continuing, you
+          agree to our
+          <a href="privacy.html">Privacy Policy</a>.
+        </p>
+        <button onclick="acceptCookies()">Accept</button>
+      </div>
     </div>
+
 
     <script src="script.js"></script>
     <!-- Non-critical CSS -->
