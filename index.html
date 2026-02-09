@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media On Africa | Leading Tech Solutions in Johannesburg</title>
+
     <meta
       name="description"
       content="Media On Africa - Johannesburg's premier technology partner offering web development, AI solutions, cloud services, and digital transformation."
@@ -13,10 +14,8 @@
       content="Johannesburg tech company, web development South Africa, AI solutions Africa, digital transformation Johannesburg"
     />
     <meta name="author" content="Media On Africa" />
-    <meta
-      property="og:title"
-      content="Media On Africa | Leading Tech Solutions in Johannesburg"
-    />
+
+    <meta property="og:title" content="Media On Africa | Leading Tech Solutions in Johannesburg" />
     <meta
       property="og:description"
       content="Johannesburg's premier technology partner offering web development, AI solutions, and digital transformation across Africa."
@@ -24,563 +23,107 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mediaonafrica.com" />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Fonts (premium + consistent across pages) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@600;800;900&family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Dev Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-      <div class="loader"></div>
+    <div class="loading-screen" id="loadingScreen" aria-label="Loading">
+      <div class="loader" aria-hidden="true"></div>
       <div class="loading-text">MEDIA ON AFRICA</div>
     </div>
 
-    <!-- 3D Background -->
-    <div id="three-bg"></div>
+    <!-- Background layers -->
+    <div id="three-bg" aria-hidden="true"></div>
+    <div class="particles" id="particles" aria-hidden="true"></div>
 
-    <!-- Particle Background -->
-    <div class="particles" id="particles"></div>
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" type="button" onclick="scrollToTop()" aria-label="Back to top">
+      ↑
+    </button>
 
-    <!-- Back to Top Button -->
-    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</div>
+    <!-- Chat widget -->
+    <button class="chat-widget" type="button" onclick="openChat()" aria-label="Open WhatsApp chat">
+      <span aria-hidden="true">💬</span> Discuss Project
+    </button>
 
-    <!-- Live Chat Widget -->
-    <div class="chat-widget" onclick="openChat()">
-      <span>💬</span> Discuss Project
-    </div>
-
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <!--Navbar-->
-    <nav class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar" aria-label="Primary navigation">
       <div class="navbar-container">
-        <a href="#" class="logo">
-          <div class="logo-icon">M</div>
+        <a href="#home" class="logo" aria-label="Media on Africa Home">
+          <div class="logo-icon" aria-hidden="true">M</div>
           <div class="logo-text">Media on Africa</div>
         </a>
 
-        <!-- Desktop Links -->
-        <div class="nav-links">
+        <div class="nav-links" role="navigation" aria-label="Desktop navigation links">
           <a href="#home">Home</a>
           <a href="#mission">Mission</a>
           <a href="#services">Services</a>
+          <a href="insights.html">Insights</a>
           <a href="privacy.html">Privacy</a>
-          <a href="#contact">Contact</a>
+          <a href="#contactus">Contact</a>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" type="button">
+          ☰
+        </button>
       </div>
 
-      <!-- Mobile Menu -->
-      <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation links">
         <a href="#home">Home</a>
         <a href="#mission">Mission</a>
         <a href="#services">Services</a>
-        <a href="#tech">Tech Stack</a>
+        <a href="insights.html">Insights</a>
+        <a href="#video">Video</a>
         <a href="privacy.html">Privacy</a>
-        <a href="#contact">Contact</a>
+        <a href="#contactus">Contact</a>
       </div>
     </nav>
 
-
-
-    <!-- Main Content -->
     <main id="main-content" role="main">
-      <!-- Hero Section -->
-      <section class="hero-section" id="home">
-      <!--Background shapes-->
-      <div class="bg-shape shape-top"></div>
-      <div class="bg-shape shape-bottom"></div>
-      <div class="grid-bg-overlay"></div>
+      <!-- Hero -->
+      <section class="hero-section" id="home" aria-label="Hero">
+        <div class="bg-shape shape-top" aria-hidden="true"></div>
+        <div class="bg-shape shape-bottom" aria-hidden="true"></div>
 
-      <div class="hero-container">
-        <!--Left column-->
-        <div class="hero-text">
-          <div class="badge">
-            <span class="pulse"></span>
-            <span>The Future of African Tech</span>
-          </div>
-
-          <h1>
-            Innovate <br />
-            <span class="gradient-text">Africa's</span> <br />
-            Future
-          </h1>
-
-          <p>
-            Empowering African businesses with world-class technology solutions. From
-            startups to enterprises, we build digital experiences that drive growth.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#contactus" class="btn-primary">
-              Start Your Journey
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-            </a>
-            <a href="#services" class="btn-secondary">
-              Explore Services
-            </a>
-          </div>
-        </div>
-
-        <!--Right column-->
-        <div class="hero-image">
-          <div class="image-wrapper">
-            <img
-              src="https://static.wixstatic.com/media/a28131_a557c9ec0e904a1aaef5f3fa624f6d4e~mv2.png"
-              alt="Abstract visualization of digital connectivity in Africa"
-            />
-            <div class="overlay-gradient"></div>
-            <div clas="glass-panel">
-              <div class="status-info">
-                <div>
-                  <p class="status-label">System Status</p>
-                  <p class="status-text">Operational</p>
-                </div>
-                <div class="status-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect width="16" height="16" x="4" y="4" rx="2"></rect>
-                    <rect width="6" height="6" x="9" y="9" rx="1"></rect>
-                    <path d="M15 2v2"></path>
-                    <path d="M15 20v2"></path>
-                    <path d="M2 15h2"></path>
-                    <path d="M2 9h2"></path>
-                    <path d="M20 15h2"></path>
-                    <path d="M20 9h2"></path>
-                    <path d="M9 2v2"></path>
-                    <path d="M9 20v2"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="marquee-section">
-      <div class="marquee-wrapper">
-        <div class="marquee-track">
-          
-          <div class="marquee-content">
-            <span class="marquee-text">Tech</span>
-            <span class="marquee-dot">•</span>
-            <span class="marquee-text">Innovation</span>
-            <span class="marquee-dot">•</span>
-            <span class="marquee-text">Digital Transformation</span>
-            <span class="marquee-dot">•</span>
-          </div>
-
-          <!-- duplicate for seamless loop -->
-          <div class="marquee-content">
-            <span class="marquee-text">Digital Transformation</span>
-            <span class="marquee-dot">•</span>
-            <span class="marquee-text">Cloud Architecture</span>
-            <span class="marquee-dot">•</span>
-            <span class="marquee-text">Mobile First</span>
-            <span class="marquee-dot">•</span>
-            <span class="marquee-text">Data Security</span>
-            <span class="marquee-dot">•</span>
-            <span class="marquee-text">Scalable Systems</span>
-            <span class="marquee-dot">•</span>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-
-    <section class="our-mission" id="mission">
-        <div class="mission-grid">
-          <!-- Left Column: Heading + Image -->
-          <div class="mission-left">
-            <div class="mission-left-sticky">
-              <h2 class="mission-heading">
-                Our <br>
-                <span class="mission-heading-stroke">Mission</span>
-              </h2>
-              <div class="mission-divider"></div>
-              <div class="mission-image-wrapper">
-                <img src="https://static.wixstatic.com/media/a28131_77cc07c15588429c818f1171b4eb0dd1~mv2.png/v1/fill/w_614,h_768,al_c,lg_1,q_90,enc_auto/a28131_77cc07c15588429c818f1171b4eb0dd1~mv2.png" 
-                    alt="Media on Africa team collaborating" class="mission-image">
-                <div class="mission-overlay"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Column: Mission Items -->
-          <div class="mission-right">
-            <!-- Mission Item 1 -->
-            <div class="mission-item">
-              <h3 class="mission-item-heading">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mission-icon">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                  <path d="M2 12h20"></path>
-                </svg>
-                Bridging the Gap
-              </h3>
-              <p class="mission-item-text">
-                At Media on Africa, we believe that every African business deserves access to world-class technology solutions. Our mission is to bridge the gap between global innovation and local needs, delivering practical, scalable, and affordable digital solutions.
-              </p>
+        <div class="hero-container">
+          <div class="hero-text">
+            <div class="badge" aria-label="Brand statement">
+              <span class="pulse" aria-hidden="true"></span>
+              <span>The Future of African Tech</span>
             </div>
 
-            <!-- Mission Item 2 -->
-            <div class="mission-item">
-              <h3 class="mission-item-heading">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mission-icon">
-                  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path>
-                  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path>
-                  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path>
-                </svg>
-                Understanding Context
-              </h3>
-              <p class="mission-item-text">
-                We understand the unique challenges of operating in African markets—from infrastructure constraints to diverse user needs. This deep understanding, combined with our technical expertise, allows us to create solutions that truly work for your business and your customers.
-              </p>
-            </div>
+            <h1>
+              Innovate <br />
+              <span class="gradient-text">Africa's</span> <br />
+              Future
+            </h1>
 
-            <!-- Mission Item 3 -->
-            <div class="mission-item">
-              <h3 class="mission-item-heading">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mission-icon">
-                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-                  <polyline points="16 7 22 7 22 13"></polyline>
-                </svg>
-                Partnering for Growth
-              </h3>
-              <p class="mission-item-text">
-                Whether you're a startup looking to launch your first digital product or an established business seeking to transform your operations, we're here to be your trusted technology partner every step of the way.
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-
-      <!-- Services Section -->
-      <section class="our-services"  id="services">
-          <div class="services-container">
-          <!-- Header -->
-          <div class="services-header">
-            <h2 class="services-title">
-              Engineered for <br>
-              <span class="text-secondary">Excellence</span>
-            </h2>
-            <p class="services-subtitle">
-              Comprehensive technology solutions designed for the African market, delivered with global standards.
-            </p>
-          </div>
-
-          <!-- Services Grid -->
-          <div class="services-grid">
-            <!-- Service Item -->
-            <div class="service-item">
-              <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-              </div>
-              <h3 class="service-title">Web Development</h3>
-              <p class="service-text">
-                Custom websites and web applications built with modern technologies, optimized for performance and user experience.
-              </p>
-            </div>
-
-            <div class="service-item">
-              <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
-                  <path d="M12 18h.01"></path>
-                </svg>
-              </div>
-              <h3 class="service-title">Mobile Solutions</h3>
-              <p class="service-text">
-                Native and cross-platform mobile applications designed to engage your audience on any device.
-              </p>
-            </div>
-
-            <div class="service-item">
-              <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                  <path d="M2 12h20"></path>
-                </svg>
-              </div>
-              <h3 class="service-title">Digital Strategy</h3>
-              <p class="service-text">
-                Comprehensive digital transformation strategies tailored to the African market and global standards.
-              </p>
-            </div>
-
-            <div class="service-item">
-              <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
-                </svg>
-              </div>
-              <h3 class="service-title">Data Security &amp; Compliance</h3>
-              <p class="service-text">
-                Enterprise-grade security solutions ensuring your data and systems remain protected.
-              </p>
-            </div>
-
-            <div class="service-item">
-              <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-                  <polyline points="16 7 22 7 22 13"></polyline>
-                </svg>
-              </div>
-              <h3 class="service-title">Analytics &amp; Insights</h3>
-              <p class="service-text">
-                Data-driven solutions to help you understand your customers and optimize your business.
-              </p>
-            </div>
-
-            <div class="service-item">
-              <div class="service-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <h3 class="service-title">Consulting Services</h3>
-              <p class="service-text">
-                Expert guidance on technology decisions, architecture, and digital transformation initiatives.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="tech-showcase" id="tech">
-      <div class="container">
-
-        <!-- Header -->
-        <div class="tech-showcase-header">
-          <h2 class="tech-title-main">Our Technology Stack</h2>
-          <p class="tech-subtitle-main">
-            Carefully chosen technologies to build scalable, secure, and future-ready systems
-          </p>
-        </div>
-
-        <!-- Grid -->
-        <div class="tech-showcase-grid">
-
-          <div class="tech-card">
-            <div class="tech-card-icon">⚛️</div>
-            <h3>Frontend</h3>
-            <p>React, Next.js, modern UI systems built for performance and scalability.</p>
-          </div>
-
-          <div class="tech-card">
-            <div class="tech-card-icon">🧠</div>
-            <h3>Backend</h3>
-            <p>Node.js, APIs, and scalable server-side architectures.</p>
-          </div>
-
-          <div class="tech-card">
-            <div class="tech-card-icon">🐍</div>
-            <h3>AI & Data</h3>
-            <p>Python, machine learning, automation, and intelligent systems.</p>
-          </div>
-
-          <div class="tech-card">
-            <div class="tech-card-icon">☁️</div>
-            <h3>Cloud</h3>
-            <p>AWS, Azure, secure deployments and cloud-native solutions.</p>
-          </div>
-
-          <div class="tech-card">
-            <div class="tech-card-icon">🔐</div>
-            <h3>Security</h3>
-            <p>Authentication, encryption, and data-first security strategies.</p>
-          </div>
-
-          <div class="tech-card">
-            <div class="tech-card-icon">🗄️</div>
-            <h3>Databases</h3>
-            <p>MongoDB, SQL, and optimized data storage solutions.</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-
-    <section class="how-we-work px-6 lg:px-24 py-16" id="how-we-work">
-
-      <!-- Heading on top -->
-      <h2 class="how-we-work-heading text-center text-4xl lg:text-5xl font-heading mb-12 text-primary">
-        How We Work
-      </h2>
-
-      <!-- Flex container for image + steps -->
-      <div class="how-we-work-container flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
-
-        <!-- Left Column: Image -->
-        <div class="how-we-work-image lg:flex-1 relative rounded-2xl overflow-hidden shadow-2xl">
-          <img src="https://static.wixstatic.com/media/a28131_62b8cd1be29a4ea3a31d6fac7068839a~mv2.png"
-            alt="Strategic planning session"
-            class="w-full object-cover rounded-2xl">
-        </div>
-
-        <!-- Right Column: Steps -->
-        <div class="how-we-work-steps lg:flex-1 relative">
-          <ul class="steps-list">
-            <!-- Spine / Vertical Line -->
-            <li class="timeline-spine-wrapper">
-              <div class="timeline-spine" id="steps-line"></div>
-            </li>
-
-            <!-- Step 01 -->
-            <li class="timeline-step reveal-on-scroll">
-              <div class="timeline-dot">01</div>
-              <div class="timeline-card">
-                <h3>Discovery & Planning</h3>
-                <p>We deep-dive into your business, users, and goals to create a clear, strategic roadmap.</p>
-              </div>
-            </li>
-
-            <!-- Step 02 -->
-            <li class="timeline-step reveal-on-scroll">
-              <div class="timeline-dot">02</div>
-              <div class="timeline-card">
-                <h3>Design & Development</h3>
-                <p>We design and build modern, scalable solutions using best practices and clean architecture.</p>
-              </div>
-            </li>
-
-            <!-- Step 03 -->
-            <li class="timeline-step reveal-on-scroll">
-              <div class="timeline-dot">03</div>
-              <div class="timeline-card">
-                <h3>Testing & Quality</h3>
-                <p>Rigorous testing ensures speed, security, and flawless user experience.</p>
-              </div>
-            </li>
-
-            <!-- Step 04 -->
-            <li class="timeline-step reveal-on-scroll">
-              <div class="timeline-dot">04</div>
-              <div class="timeline-card">
-                <h3>Launch & Support</h3>
-                <p>We launch with confidence and provide ongoing support as you grow.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-      <!-- Contact Section -->
-      <section class="contact-section" id="contactus">
-          <!--Left Side: Text + Info Cards--> 
-          <div class="contact-text">
-            <h2>
-              Let's Build <br />
-              Something <span class="text-secondary">Great</span>
-            </h2>
             <p>
-              Ready to transform your business with cutting-edge technology? Get in touch
-              with us today to discuss your project.
+              Empowering African businesses with world-class technology solutions. From startups to enterprises,
+              we build digital experiences that drive growth.
             </p>
-          
-            <!--Info Cards-->
-            <div class="info-cards">
-              <div class="info-card">
-                <div class="icon">
-                  <!--Globe SVG-->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                    <path d="M2 12h20"></path>
-                  </svg>
-                </div>
-                <div>
-                  <p>Email Us</p>
-                  <a href="mailto:info@mediaon.africa">info@mediaon.africa</a>
-                </div>
-              </div>
 
-              <!--Social Links-->
-              <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-              </div>
-            </div>
-          </div>
-
-          <!--Right Side: Contact Form-->
-          <div class="contact-form" id="Startyourproject">
-            <h3>Send us a message</h3>
-            <form>
-              <div class="form-row">
-                <div class="form-group">
-                  <label htmlFor="name">Your Name</label>
-                  <input type="text" id="name" placeholder="Name" />
-                </div>
-                <div class="form-group">
-                  <label htmlFor="email">Email Address</label>
-                  <input type="email" id="email" placeholder="Email" />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  placeholder="Tell us about your project..."
-                ></textarea>
-              </div>
-
-              <button type="submit">
-                Send Message
+            <div class="hero-buttons">
+              <a href="#contactus" class="btn-primary">
+                Start Your Journey
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -588,76 +131,584 @@
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
                 >
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
-              </button>
-            </form>
+              </a>
+
+              <a href="#video" class="btn-secondary">Watch Video</a>
+            </div>
           </div>
+
+          <div class="hero-image" aria-label="Hero image">
+            <div class="image-wrapper">
+              <img
+                src="https://static.wixstatic.com/media/a28131_a557c9ec0e904a1aaef5f3fa624f6d4e~mv2.png"
+                alt="Abstract visualization of digital connectivity in Africa"
+                loading="eager"
+              />
+              <div class="overlay-gradient" aria-hidden="true"></div>
+
+              <div class="glass-panel" aria-label="System status panel">
+                <div class="status-info">
+                  <div>
+                    <p class="status-label">System Status</p>
+                    <p class="status-text">Operational</p>
+                  </div>
+                  <div class="status-icon" aria-hidden="true">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect width="16" height="16" x="4" y="4" rx="2"></rect>
+                      <rect width="6" height="6" x="9" y="9" rx="1"></rect>
+                      <path d="M15 2v2"></path>
+                      <path d="M15 20v2"></path>
+                      <path d="M2 15h2"></path>
+                      <path d="M2 9h2"></path>
+                      <path d="M20 15h2"></path>
+                      <path d="M20 9h2"></path>
+                      <path d="M9 2v2"></path>
+                      <path d="M9 20v2"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Marquee -->
+      <section class="marquee-section" aria-label="Brand keywords">
+        <div class="marquee-wrapper">
+          <div class="marquee-track">
+            <div class="marquee-content">
+              <span class="marquee-text">Tech</span><span class="marquee-dot">•</span>
+              <span class="marquee-text">Innovation</span><span class="marquee-dot">•</span>
+              <span class="marquee-text">Digital Transformation</span><span class="marquee-dot">•</span>
+            </div>
+
+            <div class="marquee-content">
+              <span class="marquee-text">Digital Transformation</span><span class="marquee-dot">•</span>
+              <span class="marquee-text">Cloud Architecture</span><span class="marquee-dot">•</span>
+              <span class="marquee-text">Mobile First</span><span class="marquee-dot">•</span>
+              <span class="marquee-text">Data Security</span><span class="marquee-dot">•</span>
+              <span class="marquee-text">Scalable Systems</span><span class="marquee-dot">•</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission -->
+      <section class="our-mission" id="mission" aria-label="Our Mission">
+        <div class="mission-grid">
+          <div class="mission-left">
+            <div class="mission-left-sticky">
+              <h2 class="mission-heading">
+                Our <br /><span class="mission-heading-stroke">Mission</span>
+              </h2>
+              <div class="mission-divider"></div>
+              <div class="mission-image-wrapper">
+                <img
+                  src="https://static.wixstatic.com/media/a28131_77cc07c15588429c818f1171b4eb0dd1~mv2.png/v1/fill/w_614,h_768,al_c,lg_1,q_90,enc_auto/a28131_77cc07c15588429c818f1171b4eb0dd1~mv2.png"
+                  alt="Media on Africa team collaborating"
+                  class="mission-image"
+                  loading="lazy"
+                />
+                <div class="mission-overlay" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mission-right">
+            <div class="mission-item">
+              <h3 class="mission-item-heading">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="mission-icon"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+                Bridging the Gap
+              </h3>
+              <p class="mission-item-text">
+                At Media on Africa, we believe that every African business deserves access to world-class
+                technology solutions. Our mission is to bridge the gap between global innovation and local needs,
+                delivering practical, scalable, and affordable digital solutions.
+              </p>
+            </div>
+
+            <div class="mission-item">
+              <h3 class="mission-item-heading">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="mission-icon"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"
+                  ></path>
+                  <path
+                    d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"
+                  ></path>
+                  <path
+                    d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"
+                  ></path>
+                </svg>
+                Understanding Context
+              </h3>
+              <p class="mission-item-text">
+                We understand the unique challenges of operating in African markets—from infrastructure constraints
+                to diverse user needs. This deep understanding, combined with our technical expertise, allows us to
+                create solutions that truly work for your business and your customers.
+              </p>
+            </div>
+
+            <div class="mission-item">
+              <h3 class="mission-item-heading">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="mission-icon"
+                  aria-hidden="true"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline>
+                </svg>
+                Partnering for Growth
+              </h3>
+              <p class="mission-item-text">
+                Whether you're a startup looking to launch your first digital product or an established business
+                seeking to transform your operations, we're here to be your trusted technology partner every step
+                of the way.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="services" id="services" aria-label="Services">
+        <div class="services__container">
+          <div class="services-header">
+            <h2 class="services-title">
+              Engineered for <br />
+              <span class="text-secondary">Excellence</span>
+            </h2>
+            <p class="services-subtitle">
+              Comprehensive technology solutions designed for the African market, delivered with global standards.
+            </p>
+          </div>
+
+          <div class="services__grid">
+            <article class="service-card">
+              <div class="service-card__content">
+                <div class="service-card__header">
+                  <span class="service-card__icon" aria-hidden="true">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                  </span>
+                  <h3 class="service-card__heading">Web Development</h3>
+                </div>
+                <p class="service-card__text">Custom websites and web applications built with modern technologies.</p>
+              </div>
+              <div class="service-card__media">
+                <img src="assets/Services/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="Web development" loading="lazy" />
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__content">
+                <div class="service-card__header">
+                  <span class="service-card__icon" aria-hidden="true">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="7" y="2" width="10" height="20" rx="2" ry="2"></rect>
+                      <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                  </span>
+                  <h3 class="service-card__heading">Mobile Solutions</h3>
+                </div>
+                <p class="service-card__text">Native and cross-platform mobile applications for any device.</p>
+              </div>
+              <div class="service-card__media">
+                <img src="assets/Services/william-hook-9e9PD9blAto-unsplash.jpg" alt="Mobile solutions" loading="lazy" />
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__content">
+                <div class="service-card__header">
+                  <span class="service-card__icon" aria-hidden="true">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"></path>
+                      <path d="M9 12l2 2 4-4"></path>
+                    </svg>
+                  </span>
+                  <h3 class="service-card__heading">Data Security &amp; Compliance</h3>
+                </div>
+                <p class="service-card__text">Enterprise-grade security solutions ensuring your data and systems.</p>
+              </div>
+              <div class="service-card__media">
+                <img src="assets/Services/markus-spiske-uPXs5Vx5bIg-unsplash.jpg" alt="Data security and compliance" loading="lazy" />
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__content">
+                <div class="service-card__header">
+                  <span class="service-card__icon" aria-hidden="true">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M2 12h20"></path>
+                      <path d="M12 2a15 15 0 0 1 0 20"></path>
+                      <path d="M12 2a15 15 0 0 0 0 20"></path>
+                    </svg>
+                  </span>
+                  <h3 class="service-card__heading">Digital Strategy</h3>
+                </div>
+                <p class="service-card__text">Comprehensive digital transformation strategies tailored to your market.</p>
+              </div>
+              <div class="service-card__media">
+                <img src="assets/Services/vitaly-gariev-pF236tc8mrE-unsplash.jpg" alt="Digital strategy" loading="lazy" />
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__content">
+                <div class="service-card__header">
+                  <span class="service-card__icon" aria-hidden="true">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="3 17 9 11 13 15 21 7"></polyline>
+                      <polyline points="14 7 21 7 21 14"></polyline>
+                    </svg>
+                  </span>
+                  <h3 class="service-card__heading">Analytics &amp; Insights</h3>
+                </div>
+                <p class="service-card__text">Data-driven solutions to understand your customers and optimize your business.</p>
+              </div>
+              <div class="service-card__media">
+                <img src="assets/Services/adam-nowakowski-D4LDw5eXhgg-unsplash.jpg" alt="Analytics and insights" loading="lazy" />
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__content">
+                <div class="service-card__header">
+                  <span class="service-card__icon" aria-hidden="true">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                  </span>
+                  <h3 class="service-card__heading">Consulting Services</h3>
+                </div>
+                <p class="service-card__text">Expert guidance on technology decisions, architecture, and transformation initiatives.</p>
+              </div>
+              <div class="service-card__media">
+                <img src="assets/Services/akson-1K8pIbIrhkQ-unsplash.jpg" alt="Consulting services" loading="lazy" />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Video -->
+      <section class="video-section" id="video" aria-label="Marketing video">
+        <div class="video-container">
+          <div class="video-copy">
+            <h2 class="video-title">See Media On Africa <span class="video-accent">in Action</span></h2>
+            <p class="video-subtitle">
+              A quick 60–90 second overview of how we help African businesses build world-class digital products.
+            </p>
+
+            <div class="video-points" aria-label="Key benefits">
+            </div>
+
+            <button class="btn-secondary quote-btn" id="quoteBtn" type="button">
+              Get a Quote
+            </button>
+
+            <div class="quote-box" id="quoteBox" aria-live="polite" hidden>
+              <p class="quote-text" id="quoteText"></p>
+            </div>
+
+          </div>
+
+          <div class="video-frame" role="group" aria-label="Marketing video player">
+            <video controls poster="assets/Marketing Assets/Screenshot 2026-01-29 035317.png">
+              <source src="assets/Marketing Assets/Media on Africa video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Strip -->
+      <section class="tech-strip" id="tech" aria-label="Tech stack">
+        <div class="container">
+          <h2 class="tech-strip-title">Tech Stack</h2>
+
+          <div class="tech-strip-glass">
+            <div class="tech-strip-logos">
+              <div class="logo-item" title="AWS">
+                <i class="devicon-amazonwebservices-original" aria-hidden="true"></i>
+                <span>AWS</span>
+              </div>
+
+              <div class="logo-item" title="Azure">
+                <i class="devicon-azure-plain" aria-hidden="true"></i>
+                <span>Azure</span>
+              </div>
+
+              <div class="logo-item" title="React">
+                <i class="devicon-react-original" aria-hidden="true"></i>
+                <span>React</span>
+              </div>
+
+              <div class="logo-item" title="Next.js">
+                <i class="devicon-nextjs-original" aria-hidden="true"></i>
+                <span>Next.js</span>
+              </div>
+
+              <div class="logo-item" title="Node.js">
+                <i class="devicon-nodejs-plain" aria-hidden="true"></i>
+                <span>node.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-strip-cats" aria-label="Stack categories">
+            <span>Frontend</span><span class="sep">|</span>
+            <span>Backend</span><span class="sep">|</span>
+            <span>AI &amp; Data</span><span class="sep">|</span>
+            <span>Cloud</span><span class="sep">|</span>
+            <span>Security</span><span class="sep">|</span>
+            <span>Databases</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- How we work -->
+      <section class="how-we-work" id="how-we-work" aria-label="How we work">
+        <h2 class="how-we-work-heading">How We Work</h2>
+
+        <div class="how-we-work-container">
+          <div class="how-we-work-image">
+            <img
+              src="https://static.wixstatic.com/media/a28131_62b8cd1be29a4ea3a31d6fac7068839a~mv2.png"
+              alt="Strategic planning session"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="how-we-work-steps">
+            <ul class="steps-list">
+              <li class="timeline-spine-wrapper" aria-hidden="true">
+                <div class="timeline-spine" id="steps-line"></div>
+              </li>
+
+              <li class="timeline-step">
+                <div class="timeline-dot">01</div>
+                <div class="timeline-card">
+                  <h3>Discovery &amp; Planning</h3>
+                  <p>We deep-dive into your business, users, and goals to create a clear, strategic roadmap.</p>
+                </div>
+              </li>
+
+              <li class="timeline-step">
+                <div class="timeline-dot">02</div>
+                <div class="timeline-card">
+                  <h3>Design &amp; Development</h3>
+                  <p>We design and build modern, scalable solutions using best practices and clean architecture.</p>
+                </div>
+              </li>
+
+              <li class="timeline-step">
+                <div class="timeline-dot">03</div>
+                <div class="timeline-card">
+                  <h3>Testing &amp; Quality</h3>
+                  <p>Rigorous testing ensures speed, security, and flawless user experience.</p>
+                </div>
+              </li>
+
+              <li class="timeline-step">
+                <div class="timeline-dot">04</div>
+                <div class="timeline-card">
+                  <h3>Launch &amp; Support</h3>
+                  <p>We launch with confidence and provide ongoing support as you grow.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact-section" id="contactus" aria-label="Contact us">
+        <div class="contact-text">
+          <h2>
+            Let's Build <br />
+            Something <span class="text-secondary">Great</span>
+          </h2>
+          <p>
+            Ready to transform your business with cutting-edge technology? Get in touch with us today to discuss your project.
+          </p>
+
+          <div class="info-cards">
+            <div class="info-card">
+              <div class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+              </div>
+              <div>
+                <p>Email Us</p>
+                <a href="mailto:info@media.on.africa">info@mediaonafrica.com</a>
+              </div>
+            </div>
+
+            <div class="social-links" aria-label="Social links">
+              <a href="#" aria-label="LinkedIn">LinkedIn</a>
+              <a href="#" aria-label="Twitter">Twitter</a>
+              <a href="https://www.instagram.com/mediaonafrica" aria-label="Instagram">Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Send us a message</h3>
+
+          <form id="contactForm" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input name="name" type="text" id="name" placeholder="Name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input name="email" type="email" id="email" placeholder="Email" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+            </div>
+
+            <p id="formSuccess" class="form-success" style="display:none;">
+              ✅ Message sent successfully. We’ll get back to you shortly.
+            </p>
+
+            <button type="submit">
+              Send Message
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
+          </form>
+        </div>
       </section>
     </main>
 
-<!-- Footer -->
-    <footer class="bg-primary text-white pt-24 pb-12 border-t border-white/10">
-      <div class="footer-container max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
-        
-        <!-- Logo + Brand -->
-        <div class="brand space-y-2">
-          <h2 class="text-2xl font-bold">Media on Africa</h2>
-          <p class="text-sm">Empowering African Digital Transformation</p>
+    <footer aria-label="Footer">
+      <div class="footer-container">
+        <div class="brand">
+          <h2>Media on Africa</h2>
+          <p>Empowering African Digital Transformation</p>
         </div>
 
-        <!-- Quick Links -->
-        <div class="quick-links space-y-2">
-          <h3 class="text-lg font-semibold">Quick Links</h3>
-          <ul class="space-y-1">
-            <li><a href="index.html" class="hover:underline">Home</a></li>
-            <li><a href="services.html" class="hover:underline">Services</a></li>
-            <li><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
-            <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        <div class="quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="#contactus">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
-        <div class="contact-info space-y-2" id="contact">
-          <h3 class="text-lg font-semibold">Contact Info</h3>
-          <p>📧 info@mediaon.africa</p>
+        <div class="contact-info" id="contact">
+          <h3>Contact Info</h3>
+          <p>📧 info@media.on.africa</p>
           <p>📍 Johannesburg, South Africa</p>
         </div>
-        
       </div>
 
-      <!-- Footer bottom -->
-      <div class="footer-bottom mt-12 text-center text-sm border-t border-white/10 pt-4">
-        <p>© 2026 Media on Africa | <a href="privacy.html" class="hover:underline">Privacy</a> | <a href="terms.html" class="hover:underline">Terms</a></p>
+      <div class="footer-bottom">
+        <p>© 2026 Media on Africa | <a href="privacy.html">Privacy</a></p>
       </div>
     </footer>
 
-
     <!-- Cookie Consent -->
-    <div id="cookie-consent" class="cookie-consent">
+    <div id="cookie-consent" class="cookie-consent" aria-label="Cookie consent">
       <div class="cookie-card">
         <p>
-          We use essential cookies to ensure our site works. By continuing, you
-          agree to our
+          We use essential cookies to ensure our site works. By continuing, you agree to our
           <a href="privacy.html">Privacy Policy</a>.
         </p>
-        <button onclick="acceptCookies()">Accept</button>
+        <button type="button" onclick="acceptCookies()">Accept</button>
       </div>
     </div>
 
-
-    <script src="script.js"></script>
-    <!-- Non-critical CSS -->
-    <link
-      rel="stylesheet"
-      href="styles.css"
-      media="print"
-      onload="this.media='all'"
-    />
+    <!-- Correct script name -->
+    <script src="scripts.js" defer></script>
   </body>
 </html>
